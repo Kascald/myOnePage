@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+
+/* SCROLL_BAR ****************************************************** */
+body {
+    background-color: #353535;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgb(52, 53, 65);
+}
+
+body::-webkit-scrollbar-button {
+    background-color: transparent;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    /* 스크롤바 막대*/
+    height: 80px;
+    color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(73, 74, 84);
+    outline: none;
+    border: 8px solid transparent;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-button:start:decrement,
+body::-webkit-scrollbar-button:end:increment {
+    display: block;
+    background-color: rgb(52, 53, 65);
+
+}
+
+
+body::-webkit-scrollbar-thumb-track {
+    /* 스크롤바 막대를 제외한 부분*/
+    box-shadow: none;
+    background-color: #000;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: greenyellow;
+}
+
+
+
+/* HEADER ****************************************************** */
+
+
+header>.headcont {
+    width: 100%;
+    margin: 0 auto;
+    background-color: yellow;
+}
+
+header>.headcont>.topNav {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+header>.headcont>.topNav> h1 {
+    position: absolute;
+    left: 30px;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-indent: -9999px;
+    background-image: url(./../resource/img/down@official/AMD-Logo-700x394.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -30px;
+}
+
+header>.headcont>.topNav>div>ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+header>.headcont>.topNav>div {
+    position: absolute;
+}
+
+header>.headcont>.topNav>div.menuCont {
+    left: 30%;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+}
+
+header>.headcont>.topNav>div.iconCont {
+    right: 0;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+}
+
+header>.headcont>.topNav {}
+
+header>.headcont>.topNav {}
+
+header>.headcont>.topNav {}
+
+/* /* HEADER > NAV ********************** */
+
+
+
+header>.headcont>nav {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(235, 14, 14);
+}
+
+
+header>.headcont>nav>.navCon {
+    position: absolute;
+    left: 5%;
+    width: 550px;
+    height: 90px;
+    background-color: #9ed4c0;
+}
+
+header>.headcont>nav>.navCon>.gnb {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+header>.headcont>nav>.navCon>.gnb>li {
+    width: 55px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+header>.headcont>nav>.navCon>.gnb>li:nth-child(4),
+header>.headcont>nav>.navCon>.gnb>li:nth-child(5) {
+    width: fit-content;
+}
+
+header>.headcont>nav>.navCon>.gnb>li:nth-child(4)>a {
+    padding: 0 10px;
+}
+
+header>.headcont>nav>.navCon>.gnb>li>a {
+    font-size: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+
+header>.headcont>.topview {
+    height: 600px;
+    background-color: rgb(158, 118, 118);
+    background-image: url(./../resource/img/coverup.jfif);
+    background-size: cover;
+    background-position: 0 -100px;
+}
+
+/* SECTION ****************************************************** */
+section {
+    /* margin-top: 0px; */
+    background-color: skyblue;
+}
+
+section>article {
+    height: 400px;
+    background-color: #a5a5a5;
+    border: 1px solid #000;
+}
+
+.view_graph>.graph>ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    height: 200px;
+    background-color: yellow;
+}
+
+.view_graph>.graph>ul>li {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 80%;
+    height: 40px;
+}
+
+.view_graph>.graph>ul>li>.stickName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.view_graph>.graph>ul>li>.stick {
+    width: 240px;
+    height: 40px;
+    background-color: red;
+    box-shadow: 5px -5px teal;
+}
+
+.view_graph>.graph>ul>li>p {
+    margin: 0 auto;
+}
+
+/* FOOTER ****************************************************** */
+footer {
+    position: relative;
+    height: 120px;
+    background-color: royalblue;
+}
+
+footer>.sc_cont {
+    position: relative;
+}
+
+footer>.sc_cont>ul {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    width: 380px;
+}
+
+footer>.sc_cont>ul>li {
+    cursor: pointer;
+    width: 50px !important;
+    height: 50px;
+    margin-left: 5px;
+    background-color: red;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+footer>.sc_cont>ul>li:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 2.26rem;
+}
+
+footer>.sc_cont>ul>li:nth-child(1):before {
+    content: "\f39e";
+}
+
+footer>.sc_cont>ul>li:nth-child(2):before {
+    content: "\e61b";
+}
+
+footer>.sc_cont>ul>li:nth-child(3):before {
+    content: "\f16d";
+}
+
+footer>.sc_cont>ul>li:nth-child(4):before {
+    content: "\f0e1";
+}
+
+footer>.sc_cont>ul>li:nth-child(5):before {
+    font-family: "Font Awesome 5 free";
+    content: "\f0e0"
+}
+
+footer>.sc_cont>ul>li:nth-child(6):before {
+    content: "\f167";
+}
+
+footer>.sc_cont>ul>li:nth-child(7):before {
+    content: "\f1e8";
+}
+
+
+
+footer>address {
+    color: white;
+    padding-top: 80px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/* ASIDE ****************************************************** */
+aside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -18%;
+    bottom: 10%;
+    width: 120px;
+    height: 240px;
+    background-color: red;
+}
+
+aside>.sideBar {
+    position: fixed;
+    width: 110px;
+    height: 220px;
+    background-color: blue;
+}
+
+aside>.sideBar>div.menu {
+    width: 100%;
+    height: 170px;
+    background-color: antiquewhite;
+}
+
+aside>.sideBar>div.menu>ul>li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border: 1px solid #000;
+}
+
+aside>.sideBar>div.top_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+
+aside>.sideBar>div.top_arrow::before {
+    font-family: "Font Awesome 5 free";
+    font-size: 2.26rem;
+    content: "\f062";
+}
