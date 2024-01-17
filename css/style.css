@@ -66,21 +66,22 @@ header>.headcont {
 header>.headcont>.topNav {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 60px;
     background-color: #fff;
 }
 
-header>.headcont>.topNav> h1 {
+header>.headcont>.topNav>h1 {
     position: absolute;
+    cursor: pointer;
     left: 30px;
-    width: 300px;
-    height: 100px;
-    line-height: 100px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
     text-indent: -9999px;
-    background-image: url(./../resource/img/down@official/AMD-Logo-700x394.png);
+    /* background-image: url(./../resource/img/down@official/AMD-Logo-700x394.png); */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -30px;
+    background-position: 0px -25px;
 }
 
 header>.headcont>.topNav>div>ul {
@@ -119,7 +120,7 @@ header>.headcont>.topNav {}
 
 header>.headcont>nav {
     width: 100%;
-    height: 90px;
+    height: 80px;
     background-color: rgb(235, 14, 14);
 }
 
@@ -128,7 +129,7 @@ header>.headcont>nav>.navCon {
     position: absolute;
     left: 5%;
     width: 550px;
-    height: 90px;
+    height: 80px;
     background-color: #9ed4c0;
 }
 
@@ -171,7 +172,7 @@ header>.headcont>nav>.navCon>.gnb>li>a {
 header>.headcont>.topview {
     height: 600px;
     background-color: rgb(158, 118, 118);
-    background-image: url(./../resource/img/coverup.jfif);
+    /* background-image: url(./../resource/img/coverup.jfif); */
     background-size: cover;
     background-position: 0 -100px;
 }
@@ -183,12 +184,25 @@ section {
 }
 
 section>article {
-    height: 400px;
+    height: 900px;
+    margin: 0 auto;
     background-color: #a5a5a5;
     border: 1px solid #000;
 }
 
-.view_graph>.graph>ul {
+.view_graph> .graph_group {
+    display: flex;
+    width: 1100px;
+}
+
+.view_graph>.graphpage>.graph_group>.graphBox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.view_graph>.graphpage>.graph_group>.graphBox>ul {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -196,15 +210,15 @@ section>article {
     background-color: yellow;
 }
 
-.view_graph>.graph>ul>li {
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li {
     display: flex;
     justify-content: flex-start;
     align-content: center;
-    width: 80%;
+    width: 500px;
     height: 40px;
 }
 
-.view_graph>.graph>ul>li>.stickName {
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li>.stickName {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,22 +226,115 @@ section>article {
     margin-left: 20px;
 }
 
-.view_graph>.graph>ul>li>.stick {
-    width: 240px;
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li>.stick {
+    width: 350px;
     height: 40px;
     background-color: red;
     box-shadow: 5px -5px teal;
 }
 
-.view_graph>.graph>ul>li>p {
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li>p {
     margin: 0 auto;
 }
+
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li:nth-child(2)>.compareN {
+    color: #909090
+}
+
+.view_graph>.graphpage>.graph_group>.graphBox>ul>li:nth-child(2)>.compareS {
+    background-color: #707070;
+    box-shadow: 6px -6px rgb(46, 46, 46);
+}
+
+
+
+/* vidBox  */
+
+.yt_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yt_container>.vid_prevBtn>a::before {
+    font-family: "Font Awesome 5 free";
+    content: "\f048";
+    font-size: 50px;
+    padding: 0 20px;
+}
+
+.yt_container>.vid_nextBtn>a::before {
+    font-family: "Font Awesome 5 free";
+    content: "\f051";
+    font-size: 50px;
+    padding: 0 20px;
+}
+
+
+.yt_viewWindow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    top: 20px;
+    width: 610px;
+    height: 325px;
+    overflow: scroll;
+    background-color: red;
+}
+
+.yt_container>.vidFrame {
+    position: absolute;
+    width: 600px !important;
+    height: 325px;
+}
+
+.yt_container>#vid_blank {
+    content: "";
+}
+
+.yt_viewWindow>#vid1 {
+    content: "";
+}
+
+.yt_viewWindow>#vid2 {
+    content: "";
+}
+
+.yt_viewWindow>#vid3 {
+    content: "";
+}
+
+.yt_viewWindow::-webkit-scrollbar {
+    display: none;
+}
+
+.yt_viewWindow::-webkit-scrollbar-button {
+    display: none;
+}
+
+.yt_viewWindow::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.yt_viewWindow::-webkit-scrollbar-button:start:decrement,
+.yt_viewWindow::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+
+.yt_viewWindow::-webkit-scrollbar-thumb-track {
+    /* 스크롤바 막대를 제외한 부분*/
+    box-shadow: none;
+    background-color: #000;
+}
+
 
 /* FOOTER ****************************************************** */
 footer {
     position: relative;
     height: 120px;
-    background-color: royalblue;
+    background-color: black;
 }
 
 footer>.sc_cont {
@@ -249,8 +356,8 @@ footer>.sc_cont>ul>li {
     width: 50px !important;
     height: 50px;
     margin-left: 5px;
-    background-color: red;
-    border: 1px solid #000;
+    background-color: black;
+    border: 1px solid white;
     border-radius: 15px;
 }
 
@@ -261,6 +368,7 @@ footer>.sc_cont>ul>li:before {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 5px;
+    color: white;
     font-family: "Font Awesome 5 Brands";
     font-size: 2.26rem;
 }
