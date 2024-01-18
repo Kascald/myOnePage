@@ -3,7 +3,7 @@
 
 /* SCROLL_BAR ****************************************************** */
 body {
-    background-color: #353535;
+    background-color: #cecece;
 }
 
 body::-webkit-scrollbar {
@@ -108,11 +108,6 @@ header>.headcont>.topNav>div.iconCont {
     line-height: 100px;
 }
 
-header>.headcont>.topNav {}
-
-header>.headcont>.topNav {}
-
-header>.headcont>.topNav {}
 
 /* /* HEADER > NAV ********************** */
 
@@ -186,85 +181,198 @@ section {
 section>article {
     height: 900px;
     margin: 0 auto;
-    background-color: #a5a5a5;
+    background-color: #d6d6d6;
     border: 1px solid #000;
-}
-.view_graph > .prevBtn::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f060";
-    font-size: 50px;
-    padding: 0 20px;
-}
-.view_graph > .nextBtn::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f061";
-    font-size: 50px;
-    padding: 0 20px;
 }
 
 .view_graph {
+    position: relative;
     display: flex;
-    justify-content: center;
-}
-
-.view_graph> .graphpage{
-    display: flex;
-    justify-content: start;
-    overflow: hidden;
-    width: 1000px;
-    height: 425px;
-}
-
-.view_graph>.graphpage>.graph_group>.graphBox {
-    display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
 }
+.view_graph > .prevBtn {
+    position: absolute;
+    padding: 0 5px;
+    left:10%;
+}
+.view_graph > .nextBtn {
+    position: absolute;
+    padding: 0 5px;
+    right:10%;
+}
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul {
+.graph_window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 그래프 그룹 1 */
+.group1 {
+    position: relative;
+    justify-content: center;
+    width: 700px !important;
+    height: 400px !important;
+    background-image: url(./../resource/img/graph-background.png);
+}
+
+/* 그래프 뭉치 1 */
+div.graph-group > ul.graph-view {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 350px;
+    padding: 20px;
+}
+
+.group1 > .graph1 {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
-    height: 200px;
+    top: 50px;
+    left: 55px;
     background-color: yellow;
 }
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li {
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    width: 500px;
-    height: 40px;
+/* 그래프 뭉치1 - 그래프 1 -막대 공통설정 */
+.group1 > .graph1 > .stick {
+    position: relative;
+    width: 240px;
+    height: 50px;
+    left:0;
+    top: 0;
+    background-color: firebrick;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+/* 그래프 뭉치 1 -그래프 1 - 막대 표기 공통설정 */
+.graph_window > .group1 > .graph1 > .stick > .percent {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li>.stickName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    margin-left: 20px;
+/* 그래프 뭉치1 - 그래프 1 - 막대 각자설정 */
+/* .group1 > .graph1 > .stickTarget {} */
+.group1 > .graph1 > .stickComp {background-color: rgb(94, 94, 94);}
+.graph_window > .group1 > .graph1 > .stick > .perArrow {
+    top: 5px;
+    right: -10px;
+    font-size: 24px;
+    color:rgb(223, 145, 0);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+
+/* 그래프 뭉치1 - 그래프 2- 막대 공통설정 */
+.group1 > .graph2 > .stick {
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    left:77px;
+    background-color: aquamarine;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+/* 그래프 뭉치 1 -그래프 2 - 막대 표기 공통설정 */
+.graph_window > .group1 > .graph2 > .stick > .percent {
+    position: absolute;
+    right: -30%;
+    top: 35%;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li>.stick {
-    width: 350px;
-    height: 40px;
-    background-color: red;
-    box-shadow: 5px -5px teal;
+
+/* 그래프 뭉치1 - 그래프 2- 막대 각자설정 */
+.group1 > .graph2 > .stickTarget{top: 210px;}
+.group1 > .graph2 > .stickComp{top:285px;background-color: rgb(94, 94, 94);}
+.graph_window > .group1 > .graph2 > .stick > .perArrow {
+    top: 5px;
+    right: -40%;
+    font-size: 24px;
+    color:rgb(223, 145, 0);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+
+
+    
+/* 그래프 뭉치1 - 그래프 3 -막대 공통설정 */
+.group1 > .graph3 > .stick {
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    left:454px;
+    background-color: firebrick;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+/* 그래프 뭉치 1 -그래프 3 - 막대 표기 공통설정 */
+.graph_window > .group1 > .graph3 > .stick > .percent {
+    color:blue;
+    position: absolute;
+    right: -80%;
+    top: 35%;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* 그래프 뭉치1 - 그래프 3 - 막대 각자설정 */
+.group1 > .graph3 > .stickTarget {top: -30px; }
+.group1 > .graph3 > .stickComp {top: 45px; background-color: rgb(94, 94, 94);}
+.graph_window > .group1 > .graph3 > .stick > .perArrow {
+    position: absolute;
+    top: 5px;
+    right: -80%;
+    font-size: 24px;
+    color:rgb(223, 145, 0);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+
+/* 그래프 뭉치1 - 그래프 4- 막대 공통설정 */
+.group1 > .graph4 > .stick {
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    left:454px;
+    background-color: aquamarine;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+/* 그래프 뭉치 1 -그래프 4 - 막대 표기 공통설정 */
+.graph_window > .group1 > .graph4 > .stick > .percent {
+    position: absolute;
+    right: -50%;
+    top: 35%;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li>p {
-    margin: 0 auto;
-}
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li:nth-child(2)>.compareN {
-    color: #909090
-}
+/* 그래프 뭉치1 - 그래프 4- 막대 각자설정 */
+.group1 > .graph4 > .stickTarget{top: 130px;}
+.group1 > .graph4 > .stickComp{top:205px;background-color: rgb(94, 94, 94);}
+.graph_window > .group1 > .graph4 > .stick > .perArrow {
+    position: absolute;
+    top: 5px;
+    right: -50%;
+    font-size: 24px;
+    color:rgb(223, 145, 0);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
 
-.view_graph>.graphpage>.graph_group>.graphBox>ul>li:nth-child(2)>.compareS {
-    background-color: #707070;
-    box-shadow: 6px -6px rgb(46, 46, 46);
-}
+
+
+
+
+
+/* .group2 {
+    width: 700px !important;
+    height: 400px;
+    background-color: transparent;
+} */
+
+
 
 
 
