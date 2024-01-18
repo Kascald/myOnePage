@@ -189,10 +189,30 @@ section>article {
     background-color: #a5a5a5;
     border: 1px solid #000;
 }
+.view_graph > .prevBtn::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f060";
+    font-size: 50px;
+    padding: 0 20px;
+}
+.view_graph > .nextBtn::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f061";
+    font-size: 50px;
+    padding: 0 20px;
+}
 
-.view_graph> .graph_group {
+.view_graph {
     display: flex;
-    width: 1100px;
+    justify-content: center;
+}
+
+.view_graph> .graphpage{
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    width: 1000px;
+    height: 425px;
 }
 
 .view_graph>.graphpage>.graph_group>.graphBox {
@@ -305,26 +325,32 @@ section>article {
     content: "";
 }
 
-.yt_viewWindow::-webkit-scrollbar {
+.yt_viewWindow::-webkit-scrollbar,
+.graphpage::-webkit-scrollbar {
     display: none;
 }
 
-.yt_viewWindow::-webkit-scrollbar-button {
+.yt_viewWindow::-webkit-scrollbar-button,
+.graphpage::-webkit-scrollbar-button {
     display: none;
 }
 
-.yt_viewWindow::-webkit-scrollbar-thumb {
+.yt_viewWindow::-webkit-scrollbar-thumb,
+.graphpage::-webkit-scrollbar-thumb{
     display: none;
 }
 
 .yt_viewWindow::-webkit-scrollbar-button:start:decrement,
-.yt_viewWindow::-webkit-scrollbar-button:end:increment {
+.yt_viewWindow::-webkit-scrollbar-button:end:increment,
+.graphpage::-webkit-scrollbar-button:start:decrement,
+.graphpage::-webkit-scrollbar-button:end:increment {
     display: none;
 }
 
 
-.yt_viewWindow::-webkit-scrollbar-thumb-track {
-    /* 스크롤바 막대를 제외한 부분*/
+.yt_viewWindow::-webkit-scrollbar-thumb-track,
+.graphpage::-webkit-scrollbar-thumb-track {
+ /* 스크롤바 막대를 제외한 부분*/
     box-shadow: none;
     background-color: #000;
 }
