@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/charts.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our product</title>
@@ -80,76 +81,44 @@
                         <div class="vid_nextBtn"><a href="#" class="fa-solid"></a></div>
                     </div>
                 </div>
+                <div style="display:block; width:300px; height: 200px; background:url(../resource/img/down@official/10788-ryzen-master-image-1260x709.webp);" id="test">배경이미지</div>
             </article>
-            <article class="view_graph">
-                <div class="graph_window">
-                    <div class="graph-group group1">
-                        <ul class="graph-view graph1">
-                            <li class="stick stickTarget">
-                                <span class="score">score</span>
-                                <span class="percent targetPer">100</span>
-                                <span class="percent perArrow fa-solid fa-turn-up fa-3x"></span>
-                            </li>
-                            <li class="stick stickComp">
-                                <span class="score">score</span>
-                                <span class="percent comparePer">100</span>
-                            </li>
-                        </ul>
-                        <ul class="graph-view graph2">
-                            <li class="stick stickTarget">
-                                <span class="per">per</span>
-                                <span class="percent targetPer">100</span>
-                                <span class="percent perArrow fa-solid fa-turn-up fa-3x"></span>
-                            </li>
-                            <li class="stick stickComp">
-                                <span class="per">per</span>
-                                <span class="percent comparePer">100</span>
-                            </li>
-                        </ul>
+            <article class="view_graph">  
+                <div id="my-chart">
+                    <table class="charts-css bar show-heading show-labels show-primary-axis show-data-axes data-spacing-12 datasets-spacing-5"">
+                        <caption style="margin:10px auto"> AMD </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"> Country </th>
+                                <th scope="col"> Gold </th>
+                                <th scope="col"> Silver </th>
+                                <th scope="col"> Bronze </th>
+                            </tr>
+                        </thead>
 
-                        <ul class="graph-view graph3">
-                            <li class="stick stickTarget">
-                                <span class="per">per</span>
-                                <span class="percent targetPer">100</span>
-                                <span class="percent perArrow fa-solid fa-turn-up fa-3x"></span>
-                            </li>
-                            <li class="stick stickComp">
-                                <span class="per">per</span>
-                                <span class="percent comparePer">100</span>
-                            </li>
-                        </ul>
-
-                        <ul class="graph-view graph4">
-                            <li class="stick stickTarget">
-                                <span class="per">per</span>
-                                <span class="percent targetPer">100</span>
-                                <span class="percent perArrow fa-solid fa-turn-up fa-3x"></span>
-                            </li>
-                            <li class="stick stickComp">
-                                <span class="per">per</span>
-                                <span class="percent comparePer">100</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <div class="graph-group group2">
-                        <ul class="graph-view graph5">
-                            <li class="stick stickTarget"><span class="percent targetPer">100%</span></li>
-                            <li class="stick stickComp"><span class="percent comparePer">100%</span></li>
-                        </ul>
-                        <ul class="graph-view graph6">
-                            <li class="stick stickTarget"><span class="percent targetPer">100%</span></li>
-                            <li class="stick stickComp"><span class="percent comparePer">100%</span></li>
-                        </ul>
-                        <ul class="graph-view graph7">
-                            <li class="stick stickTarget"><span class="percent targetPer">100%</span></li>
-                            <li class="stick stickComp"><span class="percent comparePer">100%</span></li>
-                        </ul>
-                        <ul class="graph-view graph8">
-                            <li class="stick stickTarget"><span class="percent targetPer">100%</span></li>
-                            <li class="stick stickComp"><span class="percent comparePer">100%</span></li>
-                        </ul>
-                    </div> -->
+                        <tbody>
+                            <tr>
+                                <th> USA </th>
+                                <td style="--size: calc( 46 / 100 )"> <span class="data"> $46K </span> </td>
+                                <td style="--size: calc( 37 / 100 )"> <span class="data"> $37K </span> </td>
+                                <td style="--size: calc( 38 / 100 )"> <span class="data"> $38K </span> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> GBR </th>
+                                <td style="--size: calc( 27 / 100 )"> <span class="data"> $27K </span> </td>
+                                <td style="--size: calc( 13 / 100 )"> <span class="data"> $13K </span> </td>
+                                <td style="--size: calc( 17 / 100 )"> <span class="data"> $17K </span> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> CHN </th>
+                                <td style="--size: calc( 26 / 100 )"> <span class="data"> $26K </span> </td>
+                                <td style="--size: calc( 18 / 100 )"> <span class="data"> $18K </span> </td>
+                                <td style="--size: calc( 26 / 100 )"> <span class="data"> $26K </span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
                 <div class="prevBtn"><a href="#" class="fa-solid fa-arrow-left fa-3x"></a></div>
                 <div class="nextBtn"><a href="#" class="fa-solid fa-arrow-right fa-3x"></a></div>
             </article>
@@ -186,5 +155,5 @@
     </div>
 </body>
 <script src="https://kit.fontawesome.com/46461a3d59.js" crossorigin="anonymous"></script>
-
+<script defer src="./js/function.js"></script>
 </html>
