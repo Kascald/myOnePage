@@ -2,10 +2,12 @@
 <html lang="ko">
 
 <head>
-    <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/charts.min.css">
+    <script src="https://kit.fontawesome.com/46461a3d59.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script defer src="./js/function.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our product</title>
@@ -81,40 +83,56 @@
                         <div class="vid_nextBtn"><a href="#" class="fa-solid"></a></div>
                     </div>
                 </div>
-                <div style="display:block; width:300px; height: 200px; background:url(../resource/img/down@official/10788-ryzen-master-image-1260x709.webp);" id="test">배경이미지</div>
             </article>
-            <article class="view_graph">  
+            <article class="view_graph">
                 <div id="my-chart">
-                    <table class="charts-css bar show-heading show-labels show-primary-axis show-data-axes data-spacing-12 datasets-spacing-5"">
-                        <caption style="margin:10px auto"> AMD </caption>
+                    <table id="left-chart"
+                        class="charts-css bar multiple show-heading show-labels show-primary-axis data-spacing-20 datasets-spacing-3">
+                        <caption> AMD </caption>
                         <thead>
                             <tr>
                                 <th scope="col"> Country </th>
                                 <th scope="col"> Gold </th>
                                 <th scope="col"> Silver </th>
-                                <th scope="col"> Bronze </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th style="--label-size:30px"> USA </th>
+                                <td style="--size: calc( 46 / 100 ); --color: orange;"> <span class="data outside amd-data"> $46K </span> </td>
+                                <td style="--size: calc( 37 / 100 ); --color: darkgray;"> <span class="data outside"> $37K </span> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> GBR </th>
+                                <td style="--size: calc( 27 / 100 )"> <span class="data outside amd-data"> $27K </span> </td>
+                                <td style="--size: calc( 13 / 100 )"> <span class="data outside"> $13K </span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table id="right-chart"
+                        class="charts-css bar multiple show-heading show-labels show-primary-axis data-spacing-20 datasets-spacing-3">
+                        <caption> AMD </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"> Country </th>
+                                <th scope="col"> Gold </th>
+                                <th scope="col"> Silver </th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
                                 <th> USA </th>
-                                <td style="--size: calc( 46 / 100 )"> <span class="data"> $46K </span> </td>
-                                <td style="--size: calc( 37 / 100 )"> <span class="data"> $37K </span> </td>
-                                <td style="--size: calc( 38 / 100 )"> <span class="data"> $38K </span> </td>
+                                <td style="--size: calc( 46 / 100 ); --color: orange;"> <span class="data outside amd-data"> $46K </span></td>
+                                <td style="--size: calc( 37 / 100 ); --color: darkgray;"> <span class="data outside"> $37K </span> </td>
                             </tr>
                             <tr>
                                 <th scope="row"> GBR </th>
-                                <td style="--size: calc( 27 / 100 )"> <span class="data"> $27K </span> </td>
-                                <td style="--size: calc( 13 / 100 )"> <span class="data"> $13K </span> </td>
-                                <td style="--size: calc( 17 / 100 )"> <span class="data"> $17K </span> </td>
+                                <td style="--size: calc( 27 / 100 )"> <span class="data outside amd-data"> $27K </span> </td>
+                                <td style="--size: calc( 13 / 100 )"> <span class="data outside"> $13K </span> </td>
                             </tr>
-                            <tr>
-                                <th scope="row"> CHN </th>
-                                <td style="--size: calc( 26 / 100 )"> <span class="data"> $26K </span> </td>
-                                <td style="--size: calc( 18 / 100 )"> <span class="data"> $18K </span> </td>
-                                <td style="--size: calc( 26 / 100 )"> <span class="data"> $26K </span> </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -122,7 +140,55 @@
                 <div class="prevBtn"><a href="#" class="fa-solid fa-arrow-left fa-3x"></a></div>
                 <div class="nextBtn"><a href="#" class="fa-solid fa-arrow-right fa-3x"></a></div>
             </article>
-            <article class="spec_sheet"></article>
+
+            <article class="spec_sheet">
+                <table id="sheet">
+                <caption>spec</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>가</td>
+                            <td>나</td>
+                            <td>다</td>
+                            <td>라</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+
+
             <article class="contact"></article>
         </section>
         <footer>
@@ -154,6 +220,5 @@
         </aside>
     </div>
 </body>
-<script src="https://kit.fontawesome.com/46461a3d59.js" crossorigin="anonymous"></script>
-<script defer src="./js/function.js"></script>
+
 </html>

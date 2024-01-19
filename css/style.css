@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-/* #test{
-    background-size: cover;
-    background-image: url(./../resource/img/down@official/10788-ryzen-master-image-1260x709.webp);
-} */
 /* SCROLL_BAR ****************************************************** */
 body {
-    background-color: #cecece;
+    /* background-color: #cecece; */
 }
 
 body::-webkit-scrollbar {
@@ -52,7 +48,7 @@ body::-webkit-scrollbar-thumb-track {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 
@@ -158,19 +154,21 @@ header>.headcont>nav>.navCon>.gnb>li:nth-child(4)>a {
 }
 
 header>.headcont>nav>.navCon>.gnb>li>a {
-    font-size: 15px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 12px;
-    padding-right: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 18px 10px 18px 10px;
 }
 
+header>.headcont>nav>.navCon>.gnb>li>a:hover {
+
+    text-decoration: underline;
+}
 
 
 header>.headcont>.topview {
     height: 600px;
     background-color: rgb(158, 118, 118);
-    /* background-image: url(./../resource/img/coverup.jfif); */
+    /* background-image: url(../img/coverup.jfif); */
     background-size: cover;
     background-position: 0 -100px;
 }
@@ -178,39 +176,80 @@ header>.headcont>.topview {
 /* SECTION ****************************************************** */
 section {
     /* margin-top: 0px; */
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 
 section>article {
-    height: 900px;
+    height: 600px;
     margin: 0 auto;
-    background-color: #d6d6d6;
+    /* background-color: #d6d6d6; */
     border: 1px solid #000;
+}
+
+section>article:nth-child(1) {
+    height: 400px;
 }
 
 .view_graph {
     position: relative;
+    height: 450px;
+    /* background-color: #4b0f95;
+    background-image: linear-gradient(194deg, rgba(75, 15, 149,0.7) 5%, rgba(15, 5, 20, 0.7) 26%, rgba(27, 8, 43, 0.7) 81%, rgba(6, 36, 108,0.7) 91%); */
 }
 
 .view_graph > #my-chart {
     position: absolute;
-    top: 20%;
+    display: flex;
+    top: 30%;
     left: 20%;
-    width: 300px;
-    max-width: 300px;
+    width: 80%;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
-
-.view_graph > .prevBtn {
-    position: absolute;
-    padding: 0 5px;
-    left:10%;
+#my-chart .column caption {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.25rem;
 }
-.view_graph > .nextBtn {
+
+#my-chart>table>caption {
+    position: absolute;
+    left: -10%;
+    top: -25%;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#my-chart .bar {
+    --labels-size: 30px;
+}
+
+.amd-data::after {
+    margin-left: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    text-indent: 4px;
+    content: '\e098';
+    font-family: "Font Awesome 5 Free";
+}
+
+.data {
+    padding-left: 10px;
+}
+
+.view_graph>.prevBtn {
     position: absolute;
     padding: 0 5px;
-    right:10%;
+    left: 5%;
+    top: 40%;
+}
+
+.view_graph>.nextBtn {
+    position: absolute;
+    padding: 0 5px;
+    right: 5%;
+    top: 40%;
 }
 
 
@@ -223,6 +262,11 @@ section>article {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.yt_container>.vid_prevBtn,
+.yt_container>.vid_nextBtn {
+    margin-top: 60px;
 }
 
 .yt_container>.vid_prevBtn>a::before {
@@ -245,7 +289,7 @@ section>article {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    top: 20px;
+    top: 30px;
     width: 610px;
     height: 325px;
     overflow: scroll;
@@ -285,7 +329,7 @@ section>article {
 }
 
 .yt_viewWindow::-webkit-scrollbar-thumb,
-.graphpage::-webkit-scrollbar-thumb{
+.graphpage::-webkit-scrollbar-thumb {
     display: none;
 }
 
@@ -299,11 +343,42 @@ section>article {
 
 .yt_viewWindow::-webkit-scrollbar-thumb-track,
 .graphpage::-webkit-scrollbar-thumb-track {
- /* 스크롤바 막대를 제외한 부분*/
+    /* 스크롤바 막대를 제외한 부분*/
     box-shadow: none;
     background-color: #000;
 }
 
+/* spec sheet */
+.spec_sheet {
+    height: 900px;
+}
+
+#sheet {
+    width: 800px;
+    height: 700px;
+    margin: 30px auto;
+    background-color: yellow;
+}
+
+#sheet>caption {
+    display: table-caption;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    caption-side: top;
+}
+
+#sheet>thead {
+    height: 20px !important;
+}
+
+#sheet>tbody>tr>td {
+    height: 40px;
+    border: 1px solid #000;
+}
 
 /* FOOTER ****************************************************** */
 footer {
@@ -312,8 +387,10 @@ footer {
     background-color: black;
 }
 
+
 footer>.sc_cont {
     position: relative;
+    right: 10%;
 }
 
 footer>.sc_cont>ul {
@@ -377,16 +454,13 @@ footer>.sc_cont>ul>li:nth-child(7):before {
     content: "\f1e8";
 }
 
-
-
 footer>address {
     color: white;
-    padding-top: 80px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 50px;
     text-align: center;
-    height: 30px;
-    line-height: 30px;
 }
-
 
 /* ASIDE ****************************************************** */
 aside {
