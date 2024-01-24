@@ -1,9 +1,23 @@
 @charset "UTF-8";
-
-/* SCROLL_BAR ****************************************************** */
-body {
-    /* background-color: #cecece; */
+@font-face {
+    font-family: 'KORAILCondensed-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KORAILCondensed-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+body {
+    position: relative;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* SCROLL_BAR ****************************************************** */
 
 body::-webkit-scrollbar {
     width: 10px;
@@ -65,46 +79,74 @@ header>.headcont {
 header>.headcont>.topNav {
     position: relative;
     width: 100%;
-    height: 60px;
-    background-color: #fff;
+    height: 80px;
+    line-height: 80px;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
 }
 
-header>.headcont>.topNav>h1 {
+header>.headcont>.topNav > h1 {
     position: absolute;
     cursor: pointer;
     left: 30px;
     width: 200px;
-    height: 60px;
-    line-height: 60px;
+    height: 80px;
+    line-height: 80px;
     text-indent: -9999px;
-    /* background-image: url(./../resource/img/down@official/AMD-Logo-700x394.png); */
+    filter: invert(1);
+    background-image: url(./../img/down/AMD-Logo-700x394.png) ;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0px -25px;
+    background-position: 0px -15px;
 }
 
-header>.headcont>.topNav>div>ul {
+header>.headcont>.topNav>div> ul {
     display: flex;
     justify-content: space-evenly;
-    width: 300px;
+    width: 600px;
 }
 
 header>.headcont>.topNav>div {
     position: absolute;
 }
 
-header>.headcont>.topNav>div.menuCont {
-    left: 30%;
-    width: 300px;
-    height: 100px;
-    line-height: 100px;
+
+header>.headcont>.topNav > div.menuCont {
+    left: 25%;
+    width: 500px;
+    line-height: 80px;
 }
+header>.headcont>.topNav>div.menuCont> ul {display: flex; justify-content: space-evenly;}
+/* header>.headcont>.topNav>div.menuCont> ul > li  {width: 150px;} */
+
+header>.headcont>.topNav>div.menuCont> ul > li > a {
+    color: white;
+    font-size: 24px;
+    padding:0;
+    position: relative;
+}
+
+header>.headcont>.topNav>div.menuCont>ul>li>a::after {
+    position: absolute;
+    bottom: -8px;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    content: "";
+    display: block;
+    margin: 0;
+    padding-top: 5px;
+    transform: scaleX(0);
+    transition: transform .25s ease-in-out;
+    width: 100%;
+}
+header>.headcont>.topNav>div.menuCont>ul>li>a:hover::after{transform: scaleX(1) translateY(-3px); }
+
 
 header>.headcont>.topNav>div.iconCont {
     right: 0;
     width: 300px;
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
 }
 
 
@@ -112,19 +154,19 @@ header>.headcont>.topNav>div.iconCont {
 
 
 
-header>.headcont>nav {
+header>.headcont > nav {
     width: 100%;
     height: 80px;
-    background-color: rgb(235, 14, 14);
+    background-color: white;
 }
 
 
 header>.headcont>nav>.navCon {
     position: absolute;
     left: 5%;
-    width: 550px;
+    width: 700px;
     height: 80px;
-    background-color: #9ed4c0;
+    /* background-color: #9ed4c0; */
 }
 
 header>.headcont>nav>.navCon>.gnb {
@@ -137,11 +179,10 @@ header>.headcont>nav>.navCon>.gnb {
 }
 
 header>.headcont>nav>.navCon>.gnb>li {
-    width: 55px;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 header>.headcont>nav>.navCon>.gnb>li:nth-child(4),
@@ -154,6 +195,7 @@ header>.headcont>nav>.navCon>.gnb>li:nth-child(4)>a {
 }
 
 header>.headcont>nav>.navCon>.gnb>li>a {
+    color: #000;
     font-size: 18px;
     font-weight: 600;
     padding: 18px 10px 18px 10px;
@@ -168,19 +210,18 @@ header>.headcont>nav>.navCon>.gnb>li>a:hover {
 header>.headcont>.topview {
     height: 600px;
     background-color: rgb(158, 118, 118);
-    /* background-image: url(../img/coverup.jfif); */
+    background-image: url(../img/down/1268900-ryzen-background-1920x600.webp);
     background-size: cover;
     background-position: 0 -100px;
 }
 
 /* SECTION ****************************************************** */
 section {
-    /* margin-top: 0px; */
-    /* background-color: skyblue; */
+    content: "";
 }
 
-section>article {
-    height: 600px;
+section > article {
+    /* height: 600px; */
     margin: 0 auto;
     /* background-color: #d6d6d6; */
     border: 1px solid #000;
@@ -191,6 +232,9 @@ section>article:nth-child(1) {
 }
 
 .view_graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 450px;
     /* background-color: #4b0f95;
@@ -198,12 +242,11 @@ section>article:nth-child(1) {
 }
 
 .view_graph > #my-chart {
-    position: absolute;
     display: flex;
-    top: 30%;
-    left: 20%;
-    width: 80%;
-    max-width: 2000px;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -212,7 +255,7 @@ section>article:nth-child(1) {
     font-weight: bold;
     line-height: 1.25rem;
 }
-
+#my-chart table {margin-left:80px; margin-top: 40px;}
 #my-chart>table>caption {
     position: absolute;
     left: -10%;
@@ -223,6 +266,7 @@ section>article:nth-child(1) {
 
 #my-chart .bar {
     --labels-size: 30px;
+    --aspect-ratio: 16 / 9;
 }
 
 .amd-data::after {
@@ -238,6 +282,7 @@ section>article:nth-child(1) {
     padding-left: 10px;
 }
 
+.divider{width: 5px; height: 280px; left: 50%;}
 .view_graph>.prevBtn {
     position: absolute;
     padding: 0 5px;
@@ -257,7 +302,7 @@ section>article:nth-child(1) {
 
 
 /* vidBox  */
-
+.content:nth-child(1){background-color: black;}
 .yt_container {
     display: flex;
     justify-content: center;
@@ -270,6 +315,7 @@ section>article:nth-child(1) {
 }
 
 .yt_container>.vid_prevBtn>a::before {
+    color: #fff;
     font-family: "Font Awesome 5 free";
     content: "\f048";
     font-size: 50px;
@@ -277,6 +323,7 @@ section>article:nth-child(1) {
 }
 
 .yt_container>.vid_nextBtn>a::before {
+    color: #fff;
     font-family: "Font Awesome 5 free";
     content: "\f051";
     font-size: 50px;
@@ -293,7 +340,7 @@ section>article:nth-child(1) {
     width: 610px;
     height: 325px;
     overflow: scroll;
-    background-color: red;
+    background-color: rgb(175, 41, 41);
 }
 
 .yt_container>.vidFrame {
@@ -350,39 +397,168 @@ section>article:nth-child(1) {
 
 /* spec sheet */
 .spec_sheet {
-    height: 900px;
+    position: relative;
+    height: max-content;
+    background-color: #cecece;
 }
+.spec_sheet > .Padding {
+    width: 100%;
+    height: 30px;
+    content: " ";
+    /* background-color: #9e9e9e; */
+}
+.spec_sheet > .Padding > span{ 
+    position: absolute;
+    left: 10%;
+    height: 20px; 
+    line-height: 20px;}
 
-#sheet {
-    width: 800px;
-    height: 700px;
+.spec {
+    width: 85%;
+    /* height: 700px; */
     margin: 30px auto;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
-#sheet>caption {
-    display: table-caption;
+
+.spec_sheet > .spec > h2 {
+    color: black;
     width: 100%;
     height: 30px;
     text-align: center;
     font-size: 30px;
     line-height: 30px;
-    margin-bottom: 10px;
+    font-family: "KORAILCondensed-Regular";
+    padding-top: 20px;
+    padding-bottom: 20px;
     caption-side: top;
 }
 
-#sheet>thead {
-    height: 20px !important;
+.spec > fieldset {
+    width: 100%;
+    max-height: 900px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 45px;
+    border-bottom: 3px solid #000;
+    /* background-color: blue; */
+}
+.spec > fieldset > legend {
+    display: inline;
+    float: left;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    width: 25%;
+}
+.spec > fieldset > .fieldset_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    
+}
+.spec > fieldset > .fieldset_wrapper > .itemBox{display: flex; width: 33%; margin-top: 10px; margin-bottom: 10px;}
+.spec > fieldset > .fieldset_wrapper > .itemBox > .label {font-size: 14px; font-weight: 800; font-family: 'Noto Sans KR', sans-serif; margin-right: 10px;}
+.spec > fieldset > .fieldset_wrapper > .itemBox > .label::after{content: ":";}
+.spec > fieldset > .fieldset_wrapper > .itemBox > .item {font-size: 14px; margin-left: 5px; margin-right: 10px;}
+
+
+
+.spec > fieldset > .features_label {
+    display: inline;
+    float: left;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    width: 25%;
 }
 
-#sheet>tbody>tr>td {
-    height: 40px;
-    border: 1px solid #000;
+.spec > fieldset > .fieldset_wrapper > .features {
+    display: flex; 
+    flex-flow: row wrap;
+    /* justify-content: flex-start; */
+    float: right;
+}
+.spec > fieldset > .features_wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.spec > fieldset > .fieldset_wrapper > .features {
+    width: 100%;
+    align-content: baseline;
+    margin-top: 3px;
+}
+.spec > fieldset > .fieldset_wrapper > .label { 
+    width: 100%;
+    font-size: 14px; 
+    font-weight: 800; 
+    font-family: 'Noto Sans KR', sans-serif; 
+    margin-right: 10px;
+}
+
+
+.spec > fieldset > .fieldset_wrapper > .features  > .item  { 
+    width: 33%;
+    flex-basis: 33%;
+    margin: 0 20px 0 0;
+    padding-right: 100px;
+    font-size: 14px; 
+}
+
+
+.spec > fieldset > .fieldset_wrapper > .OS-sup {display: flex; flex-flow: row wrap;} 
+.spec > fieldset > .fieldset_wrapper > .OS-sup > .OS-sup-la {float: left;}
+.spec > fieldset > .fieldset_wrapper > .OS-sup > .OS-sup-it {float: right; justify-content: flex-end;}
+
+
+/* contact************************************************************ */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px 150px 0px;
+    position: relative;
+}
+.contact > .FAQ { 
+    display: flex; 
+    justify-content: center; 
+    width: 60%; 
+    height: 80px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+.contact > .FAQ > legend {
+    display: block; 
+    text-align: center; 
+    font-size: 36px; 
+    height: 40px; 
+    line-height: 40px; 
+    margin: 20px 0;
+}
+
+.contact > .FAQ >input {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+}
+.contact > .FAQ >input::placeholder{
+    /* display: block; */
+    color: darkgray;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* FOOTER ****************************************************** */
 footer {
     position: relative;
+    display: block;
     height: 120px;
     background-color: black;
 }
@@ -460,6 +636,7 @@ footer>address {
     line-height: 40px;
     padding-top: 50px;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* ASIDE ****************************************************** */
@@ -468,15 +645,18 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    right: -18%;
+    right: 1%;
     bottom: 10%;
-    width: 120px;
+    width: 110px;
     height: 240px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 aside>.sideBar {
+    display: none; /* 임시로 안보이게 처리! */
     position: fixed;
+    right: 1%;
+    bottom: 10%;
     width: 110px;
     height: 220px;
     background-color: blue;
