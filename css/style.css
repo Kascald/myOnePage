@@ -136,10 +136,25 @@ header>.headcont>.topNav>div.menuCont>ul>li>a:hover::after{transform: scaleX(1) 
 
 header>.headcont>.topNav>div.iconCont {
     right: 0;
-    width: 300px;
+    width: 240px;
     height: 80px;
     line-height: 80px;
+    background-color: black;
 }
+
+header>.headcont>.topNav>div.iconCont> ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 240px;
+}
+header>.headcont>.topNav>div.iconCont> ul >li >a{
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+}
+
+
+
 
 /* /* HEADER > NAV ********************** */
 
