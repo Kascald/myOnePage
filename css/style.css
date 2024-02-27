@@ -291,14 +291,14 @@ section>article:nth-child(1) {
 .view_graph>.prevBtn {
     position: absolute;
     padding: 0 5px;
-    left: 5%;
+    left: 8%;
     top: 40%;
 }
 
 .view_graph>.nextBtn {
     position: absolute;
     padding: 0 5px;
-    right: 5%;
+    right: 8%;
     top: 40%;
 }
 
@@ -630,7 +630,6 @@ section>article:nth-child(1) {
     font-weight: 800; 
     font-family: 'Noto Sans KR', sans-serif; 
     margin-right: 10px;
-    transform: ;
 }
 
 
@@ -662,7 +661,7 @@ section>article:nth-child(1) {
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: 60%; 
+    width: max-content; 
     height: 80px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
@@ -680,7 +679,7 @@ section>article:nth-child(1) {
 }
 
 .contact > form > .FAQ >input {
-    width: 800px;
+    width: 500;
     height: 60px;
     margin: 10px auto;
     text-align: center;
@@ -785,7 +784,7 @@ footer>address {
 } */
 
 aside>.sideBar {
-    display: block; /* TODO 임시로 안보이게 처리! none -> static*/
+    display: none; /* TODO 임시로 안보이게 처리! none -> static*/
     position: fixed;
     right: -10%;
     bottom: 10%;
