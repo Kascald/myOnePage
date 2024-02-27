@@ -18,6 +18,7 @@ body {
 /* SCROLL_BAR ****************************************************** */
 
 body::-webkit-scrollbar {
+    display: none;
     width: 10px;
     height: 70%;
     overflow: hidden;
@@ -57,6 +58,7 @@ body::-webkit-scrollbar-thumb-track {
 
 #wrap {
     width: 100%;
+    height: 1500px;
     margin: 0 auto;
     /* background-color: greenyellow; */
 }
@@ -82,7 +84,7 @@ header>.headcont>.topNav > h1 {
     position: absolute;
     cursor: pointer;
     left: 30px;
-    width: 200px;
+    width: 10%;
     height: 80px;
     line-height: 80px;
     text-indent: -9999px;
@@ -96,7 +98,7 @@ header>.headcont>.topNav > h1 {
 header>.headcont>.topNav>div> ul {
     display: flex;
     justify-content: space-evenly;
-    width: 600px;
+    width: 100%;
 }
 
 header>.headcont>.topNav>div {
@@ -128,7 +130,7 @@ header>.headcont>.topNav>div.menuCont>ul>li>a::after {
     margin: 0;
     padding-top: 5px;
     transform: scaleX(0);
-    transition: transform .25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
     width: 100%;
 }
 header>.headcont>.topNav>div.menuCont>ul>li>a:hover::after{transform: scaleX(1) translateY(-3px); }
@@ -412,7 +414,7 @@ section>article:nth-child(1) {
     height: 267px;
     margin-left: 20px;
     border-radius: 10px;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
 }
 
 .tech > .img_wrapper > .img_frame > img{
@@ -628,6 +630,7 @@ section>article:nth-child(1) {
     font-weight: 800; 
     font-family: 'Noto Sans KR', sans-serif; 
     margin-right: 10px;
+    transform: ;
 }
 
 
@@ -695,7 +698,7 @@ section>article:nth-child(1) {
 #wrap{position: relative; height: 100%;}
 /* FOOTER ****************************************************** */
 footer {
-    position: static;
+    margin-top: 30px;
     height: 120px;
     background-color: black;
 }
@@ -777,32 +780,25 @@ footer>address {
 }
 
 /* ASIDE ****************************************************** */
-aside {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 1%;
-    bottom: 10%;
-    width: 110px;
-    height: 240px;
-    /* background-color: red; */
-}
+/* aside {
+    transition: all 3s ease-in-out;
+} */
 
 aside>.sideBar {
-    display: none; /* 임시로 안보이게 처리! */
+    display: block; /* TODO 임시로 안보이게 처리! none -> static*/
     position: fixed;
-    right: 1%;
+    right: -10%;
     bottom: 10%;
-    width: 110px;
-    height: 220px;
-    background-color: blue;
+    width: 60px;
+    height: 200px;
+    transition: all 1.3s ease-in-out;
+    /* background-color: blue; */
 }
 
 aside>.sideBar>div.menu {
     width: 100%;
     height: 170px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 
 aside>.sideBar>div.menu>ul>li {
@@ -812,6 +808,9 @@ aside>.sideBar>div.menu>ul>li {
     align-items: center;
     height: 35px;
     border: 1px solid #000;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 5px;
 }
 
 aside>.sideBar>div.top_arrow {
@@ -819,15 +818,17 @@ aside>.sideBar>div.top_arrow {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
-    background-color: aquamarine;
-    border-radius: 15px;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 8px;
 }
 
 aside>.sideBar>div.top_arrow::before {
+    color: white;
     font-family: "Font Awesome 5 free";
-    font-size: 2.26rem;
+    font-size: 1.86rem;
     content: "\f062";
 }
