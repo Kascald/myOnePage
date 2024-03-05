@@ -24,33 +24,35 @@
 
 */
 
-window.addEventListener("DOMContentLoaded",()=>{
+window.addEventListener("DOMContentLoaded", () => {
 
-    const $topnav_menu = document.querySelector("header>.headcont>.topNav>div.menuCont> ul > li");
-    const $topnav_menu2 = document.querySelector("header>.headcont>.topNav>div.iconCont>ul>li");
+
+    const $topNavMenu = document.querySelectorAll("header>.headcont>.topNav>div.menuCont> ul > li");    //topNavMenu
+    const $topNavIconMenu = document.querySelectorAll("header>.headcont>.topNav>div.iconCont>ul>li");   //topNavMyMenu
+    const $logo = document.querySelector('header>.headcont>.topNav > h1');
+
 
     const $articles_ = document.querySelectorAll("section > article");
     const $middle_menu_items = document.querySelectorAll("header>.headcont>nav>.navCon>.gnb>li");
     const $middle_menu_ = document.querySelector("header>.headcont>nav");
+
     const $sideBar = document.querySelector("aside>.sideBar");
 
-
     // console.log() test Area
-    console.log($topnav_menu);
-    console.log($topnav_menu2);
-    console.log($sideBar);
+    // console.log($topnav_menu);
+    // console.log($topnav_menu2);
+    // console.log($sideBar);
     // console.log();
     // console.log();
 
-    //For article offsetY save
+    //For article-offsetY save
     let article_page_y = [];
-    $articles_.forEach(($article)=>{
+    $articles_.forEach(($article) => {
         let article_Y = $article.offsetTop;
         article_page_y.push(article_Y);
     });// list save fin.
 
     console.log(article_page_y);
-
     //For video scroll action
     let vid_oldidx;
     let vid_nowidx = 0;
@@ -58,50 +60,74 @@ window.addEventListener("DOMContentLoaded",()=>{
     //For graph scroll action
     let graph_oldidx;
     let graph_nowidx = 0;
-    
-    console.log($middle_menu_);
-    console.log($middle_menu_.offsetTop);
 
-    window.addEventListener('scroll',()=>{
-        let $screenSize = document.body.offsetWidth;
-
-        let $wSize = $screenSize < 1300? 0 :$screenSize;
-
-        console.log("현재 스크린 너비 : ",$screenSize);
-        
-
-       
-        let $nowScrollY = document.querySelector('html').scrollTop;
-        console.log("현재 스크롤 Y : ",$nowScrollY);
-        sideBar_toggle($nowScrollY,$wSize);
-        
+    // Top Navigation 클릭 비활성화
+    //Header 메뉴 클릭 비활성화1
+    $topNavMenu.forEach((menuItems) => {
+        menuItems.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    });
+    //Header 메뉴 클릭 비활성화2
+    $topNavIconMenu.forEach((iconItems) => {
+        iconItems.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    });
+    //logo 클릭 비활성화
+    $logo.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+    //middle menu 클릭 기본기능 비활성화
+    $middle_menu_items.forEach((mMenuItems) => {
+        mMenuItems.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
     });
 
+    //화면 스크롤에 따른 사이드바 표시 여부 결정
+    var sideBar = true;
+    window.addEventListener('scroll', () => {
+        let scrollY = this.scrollY;
+        let windowSize = window.innerWidth;
+        $sideBar.style.display = 'block';
+        $sideBar.style.transition = 'all 1.2s ease-in-out;';
 
-    //FIXME 사이드바 스크롤 액션 고치기
-    function sideBar_toggle(scrollY,windowSize) {
-        let wSize = parseInt(windowSize);
-        console.log("적용 스크린 너비 : ",wSize);
-        console.log("예상 사이드바 이동거리 : ",Math.floor(wSize * 0.2),"px");
-        if(scrollY > $middle_menu_.offsetTop){
-            // console.log("현재 스크롤Y가 section article_1을 넘어섰습니다.");
-            // console.log("$sideBar.style.display 를 block으로 변경합니다.");
-            $sideBar.style =`display: block; transform: translateX(${Math.floor(wSize * -0.2)}%); transition: all 1.3s ease-in-out;`;
-
-        }else if(scrollY < $middle_menu_.offsetTop) {
-            // console.log("현재 스크롤Y가 section article_1보다 작습니다.");
-            // console.log("$sideBar.style.display 를 이동시킨 후 none으로 변경합니다.");
-
-            $sideBar.style =`display: none; transform: translateX((${Math.floor(wSize * 0.2)}%); transition: all 1.3s ease-in-out;`;
-            // let delayStlye = setTimeout(function() {
-            //     $sideBar.style='display:none;'}
-            //     ,1300);
-            
-            // clearTimeout(delayStlye);
+        if (scrollY > $middle_menu_.offsetTop) {
+            sideBar_ViewAction(windowSize); }
+        if (scrollY < $middle_menu_.offsetTop) {
+            sideBar_HideAction(windowSize);
+           
+            //sideBar slide 후 none으로 변경
+            let HA1 = setTimeout(($sideBar.style.display = 'block'),1000);
+            clearTimeout(HA1);
+            sideBar = false;
+            let HA2 = setTimeout({
+                if(sideBar) {
+                    $sideBar.style.display='none'
+                }
+            },3000);
+            clearTimeout(HA2);
         }
+        //TODO sideBar 위치가 '숨김위치'로 이동한 후에 display:none; 처리 고민해보기
+        // 잘 작동되는지 log 찍을 방법 고민하기
+    });
+
+    
+    //사이드바 표시액션 메서드
+    function sideBar_ViewAction(winSize) {
+        let windowSize = parseInt(winSize);  //현재 윈도우 사이즈 받아서 parseInt
+        $sideBar.style = `display: block; transform: translateX(${Math.floor(windowSize * -0.1)}%);`;
+        }
+    
+    function sideBar_HideAction(winSize) {
+        let windowSize = parseInt(winSize);  //현재 윈도우 사이즈 받아서 parseInt
+        $sideBar.style = `transform: translateX((${Math.floor(windowSize * 0.1)}%);`;
     }
-   
-       
-    // }
+
+    //TODO 유투브 영상 이전,다음버튼 동작 - 다음 영상으로 넘기는 슬라이드 구현 
+
+
+  // }
 
 })//end

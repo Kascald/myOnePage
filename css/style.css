@@ -90,9 +90,9 @@ header>.headcont>.topNav > h1 {
     text-indent: -9999px;
     filter: invert(1);
     background-image: url(./../img/down/AMD-Logo-700x394.png) ;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0px -15px;
+    background-position: 0px 50%;
 }
 
 header>.headcont>.topNav>div> ul {
@@ -414,7 +414,7 @@ section>article:nth-child(1) {
     height: 267px;
     margin-left: 20px;
     border-radius: 10px;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .tech > .img_wrapper > .img_frame > img{
@@ -651,8 +651,8 @@ section>article:nth-child(1) {
 .contact {
     display: flex;
     justify-content: center;
-    margin: -30px;
-    padding: 10px 0px 0px 0px;
+    margin-top: -30px; /* margin 수정 */
+    padding: 0px 0px 0px 0px;
     position: static;
     height: 240px;
     background-color: white;
@@ -786,11 +786,11 @@ footer>address {
 aside>.sideBar {
     display: none; /* TODO 임시로 안보이게 처리! none -> static*/
     position: fixed;
-    right: -10%;
+    right: -5%; /*-5%부터 시작하기*/
     bottom: 10%;
     width: 60px;
     height: 200px;
-    transition: all 1.3s ease-in-out;
+    transition: all 1.2s ease-in-out;
     /* background-color: blue; */
 }
 
@@ -831,3 +831,11 @@ aside>.sideBar>div.top_arrow::before {
     font-size: 1.86rem;
     content: "\f062";
 }
+
+/* media queary
+@media (max-width: 800px) {
+  // TODO sideNav hide
+  // topIconNav hide to menu btn 3 stripes
+  // mainNav , middle nav smaller font-size
+  // section -article size to reactively
+  } */
