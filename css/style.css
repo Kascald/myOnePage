@@ -358,15 +358,15 @@ section>article:nth-child(1) {
     content: "";
 }
 
-.yt_viewWindow>#vid1 {
+.yt_viewWindow>#vid_1 {
     content: "";
 }
 
-.yt_viewWindow>#vid2 {
+.yt_viewWindow>#vid_2 {
     content: "";
 }
 
-.yt_viewWindow>#vid3 {
+.yt_viewWindow>#vid_3 {
     content: "";
 }
 
@@ -786,7 +786,7 @@ footer>address {
 aside>.sideBar {
     display: none; /* TODO 임시로 안보이게 처리! none -> static*/
     position: fixed;
-    right: -5%; /*-5%부터 시작하기*/
+    right: -8%; /*-5%부터 시작하기*/
     bottom: 10%;
     width: 60px;
     height: 200px;
