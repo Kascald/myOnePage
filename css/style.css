@@ -7,7 +7,7 @@
 }
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-h2, h3, h4, h5 {font-size: 0px; text-indent: -9999px;}
+h2, h3, h4, h5 {width: 0; height: 0; font-size: 0px; text-indent: -9999px;}
 
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
@@ -248,22 +248,22 @@ section>article:nth-child(1) {
     background-image: linear-gradient(194deg, rgba(75, 15, 149,0.7) 5%, rgba(15, 5, 20, 0.7) 26%, rgba(27, 8, 43, 0.7) 81%, rgba(6, 36, 108,0.7) 91%); */
 }
 
-.view_graph > #my-chart {
+.view_graph > #my-chart-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1200px;
+    width: 30%;
     max-width: 90%;
-    margin: 0 auto;
+
 }
 
-#my-chart .column caption {
+#my-chart-1 .column caption {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.25rem;
 }
-#my-chart table {margin-left:80px; margin-top: 40px;}
-#my-chart>table>caption {
+#my-chart-1 table {margin-left:80px; margin-top: 40px;}
+#my-chart-1>table>caption {
     position: absolute;
     left: -10%;
     top: -25%;
@@ -271,7 +271,35 @@ section>article:nth-child(1) {
     font-weight: 600;
 }
 
-#my-chart .bar {
+#my-chart-1 .bar {
+    --labels-size: 30px;
+    --aspect-ratio: 16 / 9;
+}
+
+.view_graph > #my-chart-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    max-width: 90%;
+
+}
+
+#my-chart-2 .column caption {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.25rem;
+}
+#my-chart-2 table {margin-left:80px; margin-top: 40px;}
+#my-chart-2>table>caption {
+    position: absolute;
+    left: -10%;
+    top: -25%;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#my-chart-2 .bar {
     --labels-size: 30px;
     --aspect-ratio: 16 / 9;
 }
@@ -303,7 +331,8 @@ section>article:nth-child(1) {
     right: 8%;
     top: 40%;
 }
-
+#left-chart {width: 300px;}
+#right-chart {width: 300px;}
 
 
 
@@ -314,6 +343,7 @@ section>article:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: max-content;
 }
 
 .yt_container>.vid_prevBtn,
@@ -403,7 +433,7 @@ section>article:nth-child(1) {
 }
 /* tech - advantage */
 .tech{
-    display: flex; align-items: center; justify-content: center; width: 100%; height: 500px;background-color: rgb(10, 10, 10);}
+    display: flex; align-items: center; justify-content: center; width: 100%; height: 500px;background-color: rgb(10, 10, 10); margin-top: 70px;}
 .tech > .img_wrapper {
     display: flex;
     justify-content: center;
@@ -680,8 +710,9 @@ section>article:nth-child(1) {
     top:0px;
 }
 
-.contact > form > .FAQ >input {
-    width: 500;
+/* TODO: media queary Need size decreasing */
+.contact > form > .FAQ >input { 
+    width: 500px;
     height: 60px;
     margin: 10px auto;
     text-align: center;

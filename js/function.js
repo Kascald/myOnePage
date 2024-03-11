@@ -244,11 +244,28 @@ window.addEventListener("DOMContentLoaded", () => {
      }
 
 
+     // 차트 변경
+     //my-chart-1 part DOM select - .view_graph>#my-chart-1>#left-chart
+     //caption
+    const chartCap_1 = document.querySelector(".view_graph>#my-chart-1>#left-chart>caption"); // caption 1
+    //label top / bottom
+    const chartLabel1_top = document.querySelector(".view_graph>#my-chart-1>#left-chart>tbody>tr>.stLabel");
+    const chartLabel1_bot = document.querySelector(".view_graph>#my-chart-1>#left-chart>tbody>tr>.ndLabel");
 
 
+    //my-chart-2 part DOM select - .view_graph>#my-chart-2>#right-chart
+    //caption
+    const chartCap_2 = document.querySelector(".view_graph>#my-chart-2>#right-chart>caption"); // caption 1
+    //label top / bottom
+    const chartLabel2_top = document.querySelector(".view_graph>#my-chart-2>#right-chart>tbody>tr>.stLabel"); 
+    const chartLabel2_bot = document.querySelector(".view_graph>#my-chart-2>#right-chart>tbody>tr>.ndLabel");
 
 
+    console.log(chartCap_1);
+    console.log(chartLabel_1);
+    console.log(chartCap_2);
 
+     //TODO: CHART components DOM selecting...
 
 })
 //end
