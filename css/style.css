@@ -7,6 +7,8 @@
 }
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+h2, h3, h4, h5 {font-size: 0px; text-indent: -9999px;}
+
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }

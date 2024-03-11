@@ -51,37 +51,40 @@
             </div>
         </header>
         <section>
+            <h2>메인섹션 시작</h2>
             <article class="content">
-                    <div class="yt_container">
-                        <div class="vid_prevBtn"><a href="#" class="fa-solid"></a></div>
-                        <div class="yt_viewWindow">
-                            <!-- <div id="vid_blank" class="vidFrame"></div> -->
-                            <div id="vid_1" class="vidFrame">
-                                <iframe width="600 !important" height="315" style="margin: 0 5px"
-                                    src="https://www.youtube.com/embed/XAGFS8d_qLw?si=V8aNh3cOlBgL-jI5"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div id="vid_2" class="vidFrame">
-                                <iframe width="600 !important" height="315" style="margin: 0 5px"
-                                    src="https://www.youtube.com/embed/MlME_tWOAIM?si=JpP0skT51_Tv3dLy"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                            <div id="vid_3" class="vidFrame">
-                                <iframe width="600 !important" height="315" style="margin: 0 5px"
-                                    src="https://www.youtube.com/embed/BgYKuswsvVM?si=BWSBRPzXMvQqm4Rt"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
+                <h3>컨텐츠 필드</h3>
+                <div class="yt_container">
+                    <div class="vid_prevBtn"><a href="#" class="fa-solid"></a></div>
+                    <div class="yt_viewWindow">
+                        <!-- <div id="vid_blank" class="vidFrame"></div> -->
+                        <div id="vid_1" class="vidFrame">
+                            <iframe width="600 !important" height="315" style="margin: 0 5px"
+                                src="https://www.youtube.com/embed/XAGFS8d_qLw?si=V8aNh3cOlBgL-jI5"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
-                        <div class="vid_nextBtn"><a href="#" class="fa-solid"></a></div>
+                        <div id="vid_2" class="vidFrame">
+                            <iframe width="600 !important" height="315" style="margin: 0 5px"
+                                src="https://www.youtube.com/embed/MlME_tWOAIM?si=JpP0skT51_Tv3dLy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div id="vid_3" class="vidFrame">
+                            <iframe width="600 !important" height="315" style="margin: 0 5px"
+                                src="https://www.youtube.com/embed/BgYKuswsvVM?si=BWSBRPzXMvQqm4Rt"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
+                    <div class="vid_nextBtn"><a href="#" class="fa-solid"></a></div>
+                </div>
             </article>
             <article class="tech">
+                <h3>테크필드</h3>
                 <div class="img_wrapper">
                     <div class="img_frame"><img class="small_adv" src="./img/tech1.png" alt="#"></div>
                     <div class="img_frame"><img class="small_adv" src="./img/tech2.png" alt="#"></div>
@@ -90,6 +93,7 @@
                 </div>
             </article>
             <article class="adv">
+                <h3>ad필드</h3>
                 <div class="adv_slider">
                     <div class="slider_window">
                         <div class="slider_content slider_content_1"></div>
@@ -101,16 +105,19 @@
             </article>
 
             <article class="rdna_graph">
+                <h4>디테일 필드</h4>
                 <div class="rdna_bg">
                     <p>RDNA 그래프이미지</p>
                 </div>
             </article>
             <article class="shortSpec">
+                <h4>디테일 필드</h4>
                 <div class="shortSpec_bg">
                     <p>짧은 스펙 설명</p>
                 </div>
             </article>
             <article class="nextGen">
+                <h4>디테일 필드</h4>
                 <div class="nextGen_bg">
                     <p>차세대 그래픽카드</p>
                 </div>
@@ -118,6 +125,7 @@
 
 
             <article class="view_graph">
+                <h3>그래프필드</h3>
                 <div id="my-chart">
                     <table id="left-chart"
                         class="charts-css bar multiple show-heading show-labels show-primary-axis data-spacing-20 datasets-spacing-3">
@@ -184,6 +192,7 @@
             </article>
 
             <article class="spec_sheet">
+                <h3>스펙시트 필드</h3>
                 <div class="Padding"><span>*GPU 제원은 파트너 구성에 따라 다를 수 있습니다. GPU 제원은 파트너 웹사이트를 참조하십시오.</span></div>
                 <div class="spec">
                     <h2>AMD Radeon™ RX 7900 XTX</h2>
@@ -416,18 +425,23 @@
 
 
             <article class="contact">
-                <form action="" method="">
-                <!-- "https://www.amd.com/ko/search/site-search.html" method="GET" name="q" -->
+                <h3>콘택트 필드</h3>
+                <form onsubmit="redirectOnSubmit()">
+                    <!-- <form onsubmit="return searchRedirect()"> -->
+                    <!-- "https://www.amd.com/ko/search/site-search.html" method="GET" name="q" -->
                     <fieldset class="FAQ">
                         <legend></legend>
-                        <label for="q">FAQ</label>
-                        <input type="text" id="q" name="q" placeholder="Search..."/>
+                        <label for="searchField">FAQ</label>
+                        <input type="text" id="keyword" name="keyword" placeholder="Search..." onkeyup='printVal()' style="width:600px"/>
                         <!-- https://www.amd.com/ko/search/site-search.html#q= -->
                     </fieldset>
                 </form>
+                <!-- <p id="ittest">innerText 테스트 영역</p> -->
+                <!-- <button id="ittest_btn">확인하기</button> -->
             </article>
         </section>
         <footer>
+            <h4>푸터필드</h4>
             <div class="sc_cont">
                 <ul>
                     <li id="FB_social"><a href="#"><span class="fa-brands"></span></a></li>
@@ -442,6 +456,7 @@
             <address>&copy; 2024 Advanced Micro Devices, Inc.</address>
         </footer>
         <aside>
+            <h4>사이드바 필드</h4>
             <div class="sideBar">
                 <div class="menu">
                     <ul>
@@ -456,5 +471,6 @@
         </aside>
     </div>
 </body>
+
 
 </html>

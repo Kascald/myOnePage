@@ -209,6 +209,46 @@ window.addEventListener("DOMContentLoaded", () => {
         // if($sideBar.offsetX)
     }
 
+     //TODO: 스크립트로 리다이렉트 완성하기
+   
+     const form = document.querySelector('form');
+
+    //Input tag realtime input text
+    //  const testBtn = document.querySelector('#ittest_btn');
+    //  testBtn.addEventListener('click',(e)=>{
+    //      let ittest = document.getElementById('ittest').value;
+    //      let keyword = document.querySelector('#keyword').value;
+    //      console.log(ittest);
+    //      console.log(keyword);
+    //      ittest = keyword;
+    //  })
+    // function printVal() {
+    //     let keyword = document.querySelector('#keyword').value;
+    //     let ittest = document.getElementById('ittest').innerText= keyword;
+    // }
+ 
+ 
+     form.addEventListener('submit', (e) => {
+         redirectOnSubmit(e);
+     })
+ 
+     function redirectOnSubmit(e) {
+         e.preventDefault();
+         // 입력된 값을 가져옵니다.
+         var inputValue = document.querySelector('#keyword').value;
+         // 새 URL을 구성합니다.
+         var searchingUrl = "https://www.amd.com/ko/search/site-search.html#q="+ inputValue; // 입력된 값을 새 URL에 추가합니다.
+ 
+         // 새 URL로 리다이렉트합니다.
+         window.location.href = searchingUrl;
+     }
+
+
+
+
+
+
+
 
 })
 //end
