@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   
 
-    //TODO 유투브 영상 이전,다음버튼 동작 - 다음 영상으로 넘기는 슬라이드 구현 
+    //유투브 영상 이전,다음버튼 동작 - 다음 영상으로 넘기는 슬라이드 구현 
     const $ytPrevBtn = document.querySelector('.vid_prevBtn > a');   //이전버튼
     const $ytNextBtn = document.querySelector('.vid_nextBtn > a');  //다음버튼
     const $ytViewWindow = document.querySelector('.yt_viewWindow'); //동영상 뭉치 윈도우
